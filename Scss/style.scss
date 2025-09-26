@@ -1185,14 +1185,15 @@
 
                 &>.group-btn {
                     display: flex;
-                    column-gap: 30px;
+                    justify-content: space-between;
+                    column-gap: 10px;
 
                     &>.btn {
                         a {
                             border: 1px solid var(--primary-color);
                             text-decoration: none;
                             border-radius: 10px;
-                            padding: 5px 15px;
+                            padding: 5px;
                             color: var(--primary-color);
                         }
                     }

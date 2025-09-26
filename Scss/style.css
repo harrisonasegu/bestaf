@@ -905,14 +905,15 @@
   }
   .project-wrap > .our-products > .funds > .pos > .group-btn {
     display: flex;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
+    justify-content: space-between;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
   .project-wrap > .our-products > .funds > .pos > .group-btn > .btn a {
     border: 1px solid var(--primary-color);
     text-decoration: none;
     border-radius: 10px;
-    padding: 5px 15px;
+    padding: 5px;
     color: var(--primary-color);
   }
   .project-wrap > .our-products > .funds > .image img {
