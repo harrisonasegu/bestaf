@@ -701,7 +701,7 @@
     top: 0;
     right: -820px;
     /* hidden off screen */
-    width: 90%;
+    width: 80%;
     height: 100%;
     background: var(--primary-color);
     display: flex;
@@ -754,7 +754,7 @@
   .project-wrap > .wrap > .think-container > .think h1 {
     width: 100%;
     line-height: 40px;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .project-wrap > .wrap > .think-container > .think p {
     width: 100%;
