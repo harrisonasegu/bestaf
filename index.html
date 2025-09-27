@@ -16,6 +16,23 @@
             <div class="logo header">
                 <img src="Images/OIP.webp" alt="">
             </div>
+              <!--Phone - Size navbar-->
+            <div class="nav-phone">
+                <!-- hamburger -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- menu -->
+                <nav class="menu" id="menu">
+                    <a href="#home">Home</a>
+                    <a href="#about-tag">About</a>
+                    <a href="#product-tag">Products</a>
+                    <a href="#services-tag">Services</a>
+                    <a href="#contact-tag">Contact</a>
+                </nav>
+            </div>
             <div class="nav-links header">
                 <ul>
                     <li>
@@ -28,7 +45,10 @@
                         <a href="#product-tag">Products</a>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="#services-tag">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact-tag">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -290,7 +310,7 @@
                 </div>
             </section>
             <!-- Why Choose Us, Our Services -->
-            <section class="why-us">
+            <section  id="services-tag" class="why-us">
                 <div class="choose-us">
                     <h2>
                         Why Choose
@@ -352,7 +372,7 @@
             </section>
         </section>
         <!-- Contact Us section -->
-        <section class="contact-us-container component">
+        <section id="contact-tag" class="contact-us-container component">
             <div class="contact-us">
                 <div class="caption">
                     <h2>
@@ -603,6 +623,23 @@
 
         // Update immediately
         updateDateTime();
+
+        // function for nav menu for mobile
+        const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    menu.classList.toggle('show');
+  });
+
+  // close menu when a link is clicked
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('active');
+      menu.classList.remove('show');
+    });
+  });
     </script>
 </body>
 
