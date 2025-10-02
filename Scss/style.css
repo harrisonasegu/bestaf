@@ -10,8 +10,8 @@
   --font-h3: 25px;
   --font-h4: 16px;
   --font-btn: 12px;
-  --primary-color: #832b32;
-  --secondary-color: #ebbabe;
+  --primary-color: #3FA9F5;
+  --secondary-color: #0A0A40;
   --font-paragraph: 14px;
 }
 
@@ -429,7 +429,7 @@
   align-items: center;
 }
 .project-wrap > .wrap > .why-us > .choose-us h2 {
-  width: 350px;
+  width: 450px;
   font-size: var(--font-h2);
 }
 .project-wrap > .wrap > .why-us > .choose-us h2 span {
@@ -473,7 +473,7 @@
 .project-wrap > .contact-us-container {
   border-radius: 0px;
   color: #fff;
-  background-image: linear-gradient(to right, #111827, #550c12, #111827);
+  background-image: linear-gradient(to right, #0A0A40, #1E90FF, #0A0A40);
   padding: 50px 0;
 }
 .project-wrap > .contact-us-container > .contact-us {
@@ -535,7 +535,7 @@
   line-height: 20px;
 }
 .project-wrap > .contact-us-container > .contact-us > .get-In-touch .in-touch {
-  background-image: linear-gradient(to right, #141416, #d6b3b6, #111827);
+  background-image: linear-gradient(to right, rgba(20, 20, 22, 0.3411764706), #d6b3b6, rgba(20, 20, 22, 0.2470588235));
   width: calc(60% + 10px);
   color: #fff;
 }
@@ -642,8 +642,6 @@
     --font-h3: 20px;
     --font-h4: 16px;
     --font-btn: 12px;
-    --primary-color: #832b32;
-    --secondary-color: #ebbabe;
     --font-paragraph: 14px;
   }
   .project-wrap > .header-wrap {
@@ -1086,7 +1084,6 @@
   .project-wrap > .contact-us-container {
     border-radius: 0px;
     color: #fff;
-    background-image: linear-gradient(to right, #111827, #550c12, #111827);
     padding: 50px 0;
   }
   .project-wrap > .contact-us-container > .contact-us {
@@ -1267,8 +1264,6 @@
     --font-h3: 20px;
     --font-h4: 16px;
     --font-btn: 12px;
-    --primary-color: #832b32;
-    --secondary-color: #ebbabe;
     --font-paragraph: 14px;
   }
   .project-wrap > .header-wrap {
@@ -1707,7 +1702,6 @@
   .project-wrap > .contact-us-container {
     border-radius: 0px;
     color: #fff;
-    background-image: linear-gradient(to right, #111827, #550c12, #111827);
     padding: 30px 40px;
   }
   .project-wrap > .contact-us-container > .contact-us {
@@ -1772,7 +1766,6 @@
     line-height: 20px;
   }
   .project-wrap > .contact-us-container > .contact-us > .get-In-touch .in-touch {
-    background-image: linear-gradient(to right, #141416, #d6b3b6, #111827);
     width: 100%;
     color: #fff;
   }
@@ -1891,8 +1884,6 @@
     --font-h3: 25px;
     --font-h4: 16px;
     --font-btn: 12px;
-    --primary-color: #832b32;
-    --secondary-color: #ebbabe;
     --font-paragraph: 14px;
   }
   .project-wrap > .header-wrap {
@@ -2263,7 +2254,6 @@
   .project-wrap > .contact-us-container {
     border-radius: 0px;
     color: #fff;
-    background-image: linear-gradient(to right, #111827, #550c12, #111827);
     padding: 30px 40px;
   }
   .project-wrap > .contact-us-container > .contact-us {
@@ -2327,7 +2317,6 @@
     line-height: 20px;
   }
   .project-wrap > .contact-us-container > .contact-us > .get-In-touch .in-touch {
-    background-image: linear-gradient(to right, #4b140a, #d6b3b6, #111827);
     width: 100%;
     color: #fff;
   }
