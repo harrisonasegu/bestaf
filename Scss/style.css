@@ -5,13 +5,13 @@
 }
 
 :root {
-  --font-h1: 70px;
+  --font-h1: 50px;
   --font-h2: 45px;
   --font-h3: 25px;
   --font-h4: 16px;
   --font-btn: 12px;
-  --primary-color: #3FA9F5;
-  --secondary-color: #0A0A40;
+  --primary-color: #2468a7;
+  --secondary-color: #3FA9F5 ;
   --font-paragraph: 14px;
 }
 
@@ -43,7 +43,7 @@
   padding: 10px 70px;
 }
 .project-wrap > .header-wrap .logo img {
-  width: 40px;
+  width: 55px;
 }
 .project-wrap > .header-wrap .nav-phone {
   display: none;
@@ -535,7 +535,7 @@
   line-height: 20px;
 }
 .project-wrap > .contact-us-container > .contact-us > .get-In-touch .in-touch {
-  background-image: linear-gradient(to right, rgba(20, 20, 22, 0.3411764706), #d6b3b6, rgba(20, 20, 22, 0.2470588235));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3137254902), rgba(56, 58, 180, 0.0549019608), rgba(255, 255, 255, 0.3137254902));
   width: calc(60% + 10px);
   color: #fff;
 }

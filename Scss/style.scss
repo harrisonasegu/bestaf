@@ -5,13 +5,13 @@
 }
 
 :root {
-    --font-h1: 70px;
+    --font-h1: 50px;
     --font-h2: 45px;
     --font-h3: 25px;
     --font-h4: 16px;
     --font-btn: 12px;
-    --primary-color: #3FA9F5;
-    --secondary-color: #0A0A40;
+    --primary-color: #2468a7;
+    --secondary-color: #3FA9F5 ;
     --font-paragraph: 14px;
 }
 
@@ -45,7 +45,7 @@
 
         .logo {
             img {
-                width: 40px;
+                width: 55px;
             }
         }
 
@@ -723,7 +723,7 @@
                 }
 
                 .in-touch {
-                    background-image: linear-gradient(to right, #14141657, #d6b3b6, #1414163f);
+                    background-image: linear-gradient(to right,#ffffff50, #383ab40e, #ffffff50);
                     width: calc(60% + 10px);
                     color: #fff;
 
