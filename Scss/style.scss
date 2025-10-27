@@ -51,16 +51,6 @@
             }
         }
 
-        // What changed:
-
-        // Replaced right: -220px → top: -100%
-
-        // Replaced transition: right 0.3s ease → transition: top 0.3s ease
-
-        // Set width: 100% so it stretches across the screen
-
-        // Used .menu.show { top: 0; } so it slides down
-
         .nav-phone {
             display: none;
 
@@ -863,7 +853,7 @@
 
 
             .logo {
-                padding-left: 15px;
+                padding-left: 10px;
 
                 img {
                     width: 40px;
