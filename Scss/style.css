@@ -706,7 +706,7 @@
     /* hidden off screen */
     left: 65px;
     width: 100%;
-    height: 50%;
+    height: 80%;
     background: var(--primary-color);
     display: flex;
     flex-direction: column;
@@ -1327,7 +1327,7 @@
     /* hidden off screen */
     left: 65px;
     width: 100%;
-    height: 90%;
+    height: 80%;
     background: var(--primary-color);
     display: flex;
     flex-direction: column;
@@ -1347,6 +1347,26 @@
   }
   .project-wrap > .header-wrap .nav-phone .menu.show {
     top: 0;
+  }
+  .project-wrap > .header-wrap .nav-links {
+    display: none;
+  }
+  .project-wrap > .header-wrap .nav-links ul {
+    display: flex;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .project-wrap > .header-wrap .nav-links ul li {
+    list-style-type: none;
+  }
+  .project-wrap > .header-wrap .nav-links ul li a {
+    text-decoration: none;
+    padding: 11px 20px;
+    color: #fff;
+  }
+  .project-wrap > .header-wrap .nav-links ul li a:hover {
+    border: 1px solid #fff;
+    color: #fff;
   }
   .project-wrap > .header-wrap .nav-links {
     display: none;
