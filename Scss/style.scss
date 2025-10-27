@@ -970,7 +970,7 @@
         }
 
         &>.wrap {
-            padding: 0px 15px;
+            padding: 0px 10px;
 
             &>.think-container {
                 display: flex;
@@ -1374,6 +1374,7 @@
                     h2 {
                         width: 100%;
                         font-size: var(--font-h2);
+                        padding-top: 25px;
 
                         span {
                             box-shadow: 5px 1px 1px 0px var(--primary-color);

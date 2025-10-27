@@ -749,7 +749,7 @@
     color: #fff;
   }
   .project-wrap > .wrap {
-    padding: 0px 15px;
+    padding: 0px 10px;
   }
   .project-wrap > .wrap > .think-container {
     display: flex;
@@ -1045,6 +1045,7 @@
   .project-wrap > .wrap > .why-us > .choose-us h2 {
     width: 100%;
     font-size: var(--font-h2);
+    padding-top: 25px;
   }
   .project-wrap > .wrap > .why-us > .choose-us h2 span {
     box-shadow: 5px 1px 1px 0px var(--primary-color);
