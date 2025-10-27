@@ -10,12 +10,13 @@
   --font-h3: 25px;
   --font-h4: 16px;
   --font-btn: 12px;
-  --primary-color: #2468a7;
-  --secondary-color: #3FA9F5 ;
+  --primary-color: #2C1465;
+  --secondary-color: #3FA9F5;
   --font-paragraph: 14px;
 }
 
 .project-wrap {
+  font-family: "Roboto Flex", sans-serif;
   /* Active state after intersection */
 }
 .project-wrap .component {
@@ -24,7 +25,7 @@
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   background: white;
   padding: 40px;
-  margin: 30px 0;
+  margin: 0px 0;
   border-radius: 10px;
   box-shadow: 1px 1px 2px rgba(80, 45, 45, 0.062);
 }
@@ -81,16 +82,15 @@
 }
 .project-wrap > .header-wrap .nav-phone .menu {
   position: fixed;
-  top: 0;
-  right: -220px;
+  top: -100%;
   /* hidden off screen */
-  width: 200px;
+  width: 100%;
   height: 100%;
   background: var(--primary-color);
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  transition: right 0.3s ease;
+  transition: top 0.3s ease;
 }
 .project-wrap > .header-wrap .nav-phone .menu a {
   color: #fff;
@@ -103,7 +103,7 @@
   color: var(--primary-color);
 }
 .project-wrap > .header-wrap .nav-phone .menu.show {
-  right: 0;
+  top: 0;
 }
 .project-wrap > .header-wrap .nav-links ul {
   display: flex;
@@ -170,8 +170,8 @@
   width: 33.3333333333%;
 }
 .project-wrap > .wrap > .banks-logos > .banks img {
-  width: 80px;
-  height: 60px;
+  width: 100px;
+  height: auto;
 }
 .project-wrap > .wrap > .about-us {
   width: 700px;
@@ -279,7 +279,7 @@
   padding-top: 10px;
 }
 .project-wrap > .wrap > .more > .do-more img {
-  width: 500px;
+  width: 550px;
   height: auto;
 }
 .project-wrap > .wrap > .our-products h3 {
@@ -296,6 +296,7 @@
 .project-wrap > .wrap > .our-products > .pos-image {
   width: 100%;
   display: flex;
+  row-gap: 40px;
   -moz-column-gap: 50px;
        column-gap: 50px;
 }
@@ -334,7 +335,7 @@
   color: var(--primary-color);
 }
 .project-wrap > .wrap > .our-products > .pos-image > .image img {
-  width: 450px;
+  width: 550px;
 }
 .project-wrap > .wrap > .our-products > .pos-image > .pos,
 .project-wrap > .wrap > .our-products > .pos-image .image {
@@ -415,7 +416,7 @@
   color: var(--primary-color);
 }
 .project-wrap > .wrap > .our-products > .funds > .image img {
-  width: 450px;
+  width: 550px;
 }
 .project-wrap > .wrap > .our-products > .funds > .pos,
 .project-wrap > .wrap > .our-products > .funds .image {
@@ -429,7 +430,7 @@
   align-items: center;
 }
 .project-wrap > .wrap > .why-us > .choose-us h2 {
-  width: 450px;
+  width: 700px;
   font-size: var(--font-h2);
 }
 .project-wrap > .wrap > .why-us > .choose-us h2 span {
@@ -471,9 +472,9 @@
   line-height: 20px;
 }
 .project-wrap > .contact-us-container {
+  background-image: linear-gradient(135deg, #0A0F5C 0%, #2C1465 40%, #2438FF 80%, #7D2EFF 100%);
   border-radius: 0px;
   color: #fff;
-  background-image: linear-gradient(to right, #0A0A40, #1E90FF, #0A0A40);
   padding: 50px 0;
 }
 .project-wrap > .contact-us-container > .contact-us {
@@ -498,6 +499,8 @@
 }
 .project-wrap > .contact-us-container > .contact-us > .get-In-touch {
   display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
   margin-top: 30px;
 }
 .project-wrap > .contact-us-container > .contact-us > .get-In-touch .visit-us {
@@ -553,6 +556,9 @@
 }
 .project-wrap > .contact-us-container > .contact-us > .get-In-touch .in-touch > .touch-container form > .form-details-contents label {
   margin-bottom: -10px;
+}
+.project-wrap > .contact-us-container > .contact-us > .get-In-touch .in-touch > .touch-container form > .form-details-contents .label-top {
+  padding-top: 15px;
 }
 .project-wrap > .contact-us-container > .contact-us > .get-In-touch .in-touch > .touch-container form > .form-details-contents > .form-details {
   display: flex;
@@ -696,16 +702,17 @@
   }
   .project-wrap > .header-wrap .nav-phone .menu {
     position: fixed;
-    top: 0;
-    right: -820px;
+    top: -100%;
     /* hidden off screen */
-    width: 80%;
+    left: 65px;
+    width: 100%;
     height: 100%;
     background: var(--primary-color);
     display: flex;
     flex-direction: column;
     padding-top: 83px;
-    transition: right 0.3s ease;
+    transition: top 0.3s ease;
+    box-sizing: border-box;
   }
   .project-wrap > .header-wrap .nav-phone .menu a {
     color: #fff;
@@ -718,7 +725,7 @@
     color: var(--primary-color);
   }
   .project-wrap > .header-wrap .nav-phone .menu.show {
-    right: 0;
+    top: 0;
   }
   .project-wrap > .header-wrap .nav-links {
     display: none;
@@ -782,20 +789,21 @@
   .project-wrap > .wrap > .banks-logos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     row-gap: -10px;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
     padding: 10px;
   }
   .project-wrap > .wrap > .banks-logos > .banks {
     display: flex;
     align-items: center;
-    width: 25%;
+    width: 33.3333333333%;
     margin-top: 20px;
   }
   .project-wrap > .wrap > .banks-logos > .banks img {
-    height: 60px;
+    height: 100px;
   }
   .project-wrap > .wrap > .about-us {
     width: 100%;
