@@ -859,7 +859,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 0px 15px;
+            padding: 0px 10px;
 
 
             .logo {
@@ -970,7 +970,7 @@
         }
 
         &>.wrap {
-            padding: 0px 5px;
+            padding: 0px 0px;
 
             &>.think-container {
                 display: flex;
@@ -1172,6 +1172,8 @@
             }
 
             &>.our-products {
+             padding: 0px 10px;
+
                 h3 {
                     font-size: var(--font-h3);
                     color: var(--primary-color);
@@ -1367,10 +1369,8 @@
             }
 
             &>.why-us {
-
                 &>.choose-us {
                     text-align: center;
-
                     h2 {
                         width: 100%;
                         font-size: var(--font-h2);

@@ -658,7 +658,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 0px 15px;
+    padding: 0px 10px;
   }
   .project-wrap > .header-wrap .logo {
     padding-left: 15px;
@@ -749,7 +749,7 @@
     color: #fff;
   }
   .project-wrap > .wrap {
-    padding: 0px 5px;
+    padding: 0px 0px;
   }
   .project-wrap > .wrap > .think-container {
     display: flex;
@@ -897,6 +897,9 @@
   .project-wrap > .wrap > .more > .do-more img {
     width: 300px;
     height: auto;
+  }
+  .project-wrap > .wrap > .our-products {
+    padding: 0px 10px;
   }
   .project-wrap > .wrap > .our-products h3 {
     font-size: var(--font-h3);
