@@ -910,7 +910,7 @@
                     /* hidden off screen */
                     left: 65px;
                     width: 100%;
-                    height: 90%;
+                    height: 50%;
                     background: var(--primary-color);
                     display: flex;
                     flex-direction: column;
@@ -1726,16 +1726,18 @@
                 /* menu styling */
                 .menu {
                     position: fixed;
-                    top: 0;
-                    right: -820px;
+                    top: -100%;
+                    // right: -820px;
                     /* hidden off screen */
-                    width: 80%;
-                    height: 100%;
+                    left: 65px;
+                    width: 100%;
+                    height: 90%;
                     background: var(--primary-color);
                     display: flex;
                     flex-direction: column;
                     padding-top: 83px;
-                    transition: right 0.3s ease;
+                    transition: top 0.3s ease;
+                    box-sizing: border-box;
                 }
 
                 .menu a {
@@ -1752,10 +1754,11 @@
 
                 /* when open */
                 .menu.show {
-                    right: 0;
+                    top: 0;
                 }
             }
 
+        
             .nav-links {
                 display: none;
 
