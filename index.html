@@ -609,7 +609,39 @@
         components.forEach(component => {
             observer.observe(component);
         });
+        // ===================================
+
+        // Slow Smooth Scroll to Top ("Home" #)
+        // ===================================
+        const homeLinks = document.querySelectorAll('a[href="#"]');
+
+        homeLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const duration = 2000; // 2 seconds — change to 3000 for slower scroll
+                const start = window.pageYOffset;
+                const startTime = performance.now();
+
+                function smoothScroll(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+
+                    // Ease-out cubic for smooth stop
+                    const ease = 1 - Math.pow(1 - progress, 3);
+
+                    window.scrollTo(0, start * (1 - ease));
+
+                    if (elapsed < duration) {
+                        requestAnimationFrame(smoothScroll);
+                    }
+                }
+
+                requestAnimationFrame(smoothScroll);
+            });
+        });
         // ==================================================
+
         // This script is for textlating{Writing}
         const text = "Scalability";
         const el = document.getElementById('type');

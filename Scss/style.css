@@ -658,7 +658,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 10px 0;
+    padding: 0px 15px;
   }
   .project-wrap > .header-wrap .logo {
     padding-left: 15px;
@@ -717,6 +717,7 @@
   .project-wrap > .header-wrap .nav-phone .menu a {
     color: #fff;
     padding: 15px;
+    padding-left: 25px;
     text-decoration: none;
     transition: background 0.2s;
   }
@@ -748,7 +749,7 @@
     color: #fff;
   }
   .project-wrap > .wrap {
-    padding: 0 0px;
+    padding: 0px 15px;
   }
   .project-wrap > .wrap > .think-container {
     display: flex;
