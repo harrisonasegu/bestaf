@@ -17,6 +17,7 @@
 
 .project-wrap {
     font-family: 'Roboto Flex', sans-serif;
+
     .component {
         opacity: 0;
         transform: translateY(50px);
@@ -50,15 +51,15 @@
             }
         }
 
-// What changed:
+        // What changed:
 
-// Replaced right: -220px → top: -100%
+        // Replaced right: -220px → top: -100%
 
-// Replaced transition: right 0.3s ease → transition: top 0.3s ease
+        // Replaced transition: right 0.3s ease → transition: top 0.3s ease
 
-// Set width: 100% so it stretches across the screen
+        // Set width: 100% so it stretches across the screen
 
-// Used .menu.show { top: 0; } so it slides down
+        // Used .menu.show { top: 0; } so it slides down
 
         .nav-phone {
             display: none;
@@ -716,6 +717,7 @@
                                 label {
                                     margin-bottom: -10px;
                                 }
+
                                 .label-top {
                                     padding-top: 15px;
                                 }
@@ -743,13 +745,16 @@
 
                             .button {
                                 margin-top: 20px;
+
                                 a {
                                     text-decoration: none;
                                 }
+
                                 .btn-a {
                                     background-color: var(--primary-color);
                                     padding: 12px 25px;
                                     color: #fff;
+
                                     span {
                                         color: #fff;
                                         font-size: 50px;
@@ -1758,7 +1763,7 @@
                 }
             }
 
-        
+
             .nav-links {
                 display: none;
 
