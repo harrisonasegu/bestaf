@@ -155,6 +155,7 @@
         &>.think-container {
             display: flex;
             align-items: center;
+            column-gap: 100px;
 
             &>.think {
                 h1 {
@@ -851,7 +852,6 @@
             z-index: 1000;
             padding: 0px 10px;
 
-
             .logo {
                 padding-left: 10px;
 
@@ -954,7 +954,7 @@
                             border: 1px solid #fff;
                             color: #fff;
                         }
-                    }
+                 }
                 }
             }
         }
@@ -1230,6 +1230,7 @@
                     }
 
                     &>.image {
+                        margin-top: 30px;
                         img {
                             width: 100%;
                         }
