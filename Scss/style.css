@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -18,6 +19,10 @@
 .project-wrap {
   font-family: "Roboto Flex", sans-serif;
   /* Active state after intersection */
+  /* ===== POPUP STYLING (ALWAYS CENTERED) ===== */
+  /* ✅ Responsive adjustments */
+  /* ===== SPINNER ===== */
+  /* Smooth border transitions */
 }
 .project-wrap .component {
   opacity: 0;
@@ -32,6 +37,101 @@
 .project-wrap .component.visible {
   opacity: 1;
   transform: translateY(0);
+}
+.project-wrap #popup-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 15px;
+  padding: 35px 40px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 16px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 380px;
+  animation: fadeIn 0.4s ease;
+}
+.project-wrap #popup-message.success {
+  border-top: 6px solid #4CAF50;
+}
+.project-wrap #popup-message.error {
+  border-top: 6px solid #f44336;
+}
+.project-wrap #popup-message .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  display: block;
+}
+.project-wrap #popup-message.success .icon {
+  color: #4CAF50;
+}
+.project-wrap #popup-message.error .icon {
+  color: #f44336;
+}
+.project-wrap #popup-message h3 {
+  color: #2C1465;
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+.project-wrap #popup-message p {
+  color: #555;
+  margin: 0;
+  font-size: 15px;
+}
+.project-wrap input.error, .project-wrap textarea.error {
+  border-color: red;
+  background: #fff2f2;
+}
+.project-wrap button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 575.9px) {
+  .project-wrap #popup-message {
+    width: 85%;
+    padding: 25px 20px;
+    font-size: 14px;
+  }
+  .project-wrap #popup-message h3 {
+    font-size: 16px;
+  }
+  .project-wrap #popup-message .icon {
+    font-size: 35px;
+  }
+}
+.project-wrap .spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.project-wrap input,
+.project-wrap textarea {
+  transition: border 0.3s ease;
 }
 .project-wrap > .header-wrap {
   background-color: var(--primary-color);
@@ -587,6 +687,7 @@
   background-color: var(--primary-color);
   padding: 12px 25px;
   color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 .project-wrap > .contact-us-container > .contact-us > .get-In-touch .in-touch > .touch-container form .button .btn-a span {
   color: #fff;

@@ -1,0 +1,106 @@
+<style>
+    /* ✅ POPUP STYLING - CENTERED ON ALL DEVICES */
+    #popup-message {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border-radius: 15px;
+      padding: 35px 40px;
+      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      font-size: 16px;
+      z-index: 1000;
+      width: 90%;
+      max-width: 380px;
+      animation: fadeIn 0.4s ease;
+    }
+  
+    #popup-message.success {
+      border-top: 6px solid #4CAF50;
+    }
+  
+    #popup-message.error {
+      border-top: 6px solid #f44336;
+    }
+  
+    #popup-message .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      display: block;
+    }
+  
+    #popup-message.success .icon {
+      color: #4CAF50;
+    }
+  
+    #popup-message.error .icon {
+      color: #f44336;
+    }
+  
+    #popup-message h3 {
+      color: #2C1465;
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+  
+    #popup-message p {
+      color: #555;
+      margin: 0;
+      font-size: 15px;
+    }
+  
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, -45%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+  
+    /* ✅ Responsive fix for smaller screens */
+    @media (max-width: 480px) {
+      #popup-message {
+        width: 85%;
+        padding: 25px 20px;
+        font-size: 14px;
+      }
+  
+      #popup-message h3 {
+        font-size: 16px;
+      }
+  
+      #popup-message .icon {
+        font-size: 35px;
+      }
+    }
+  </style>
+  
+  <script>
+    const popup = document.getElementById("popup-message");
+  
+    function showPopup(type, title, message) {
+      popup.innerHTML = `
+        <span class="icon">${type === "success" ? "✅" : "❌"}</span>
+        <h3>${title}</h3>
+        <p>${message}</p>
+      `;
+      popup.className = type;
+      popup.style.display = "block";
+  
+      // Always center on screen resize (mobile orientation change)
+      const centerPopup = () => {
+        popup.style.top = "50%";
+        popup.style.left = "50%";
+        popup.style.transform = "translate(-50%, -50%)";
+      };
+      centerPopup();
+      window.addEventListener("resize", centerPopup);
+  
+      // Auto-hide after 4s
+      setTimeout(() => {
+        popup.style.display = "none";
+        window.removeEventListener("resize", centerPopup);
+      }, 4000);
+    }
+  </script>
+  
