@@ -485,9 +485,9 @@
                                     <textarea name="message" id=""
                                         placeholder="Tell us about your business and payment needs"></textarea>
                                 </div>
-                                <div class="button">
+                                <button class="button">
                                     <a id="submitBtn"class="btn-a" href="">SUBMIT <span></span></a>
-                                </div>
+                                </button>
                             </form>
                             <div id="popup-message"></div>
                         </div>
@@ -679,7 +679,7 @@
         function updateDateTime() {
             const now = new Date();
             // Format date
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const options = { year: 'numeric'};
             document.getElementById("date").textContent = now.toLocaleDateString(undefined, options);
         }
 
@@ -739,115 +739,7 @@
             });
         });
     </script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-    (function() {
-      emailjs.init("ivD7Xl4C8wKlvr2Y9"); // ✅ Your EmailJS Public Key
-    })();
-  
-    const form = document.getElementById("contactForm");
-    const submitBtn = document.getElementById("submitBtn");
-    const popup = document.getElementById("popup-message");
-  
-    const requiredFields = form.querySelectorAll("input[required], textarea[required]");
-  
-    // Disable button initially
-    submitBtn.setAttribute("disabled", true);
-  
-    // Listen for input changes to validate live
-    requiredFields.forEach(field => {
-      field.addEventListener("input", () => {
-        checkFormValidity();
-      });
-    });
-  
-    function checkFormValidity() {
-      let allFilled = true;
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          allFilled = false;
-          field.style.borderColor = "red";
-        } else {
-          field.style.borderColor = "#ccc";
-        }
-      });
-  
-      submitBtn.disabled = !allFilled;
-    }
-  
-    form.addEventListener("submit", handleSubmit);
-    submitBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      handleSubmit(e);
-    });
-  
-    function handleSubmit(event) {
-      event.preventDefault();
-  
-      // Final check before submission
-      let isValid = true;
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          isValid = false;
-          field.style.borderColor = "red";
-        } else {
-          field.style.borderColor = "#ccc";
-        }
-      });
-  
-      if (!isValid) {
-        showPopup("error", "Missing Fields", "Please fill in all required fields.");
-        return;
-      }
-  
-      // Spinner animation
-      const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = 'SENDING <span class="spinner"></span>';
-      submitBtn.style.pointerEvents = "none";
-  
-      // Send admin email first
-      emailjs.sendForm("service_4b5x5qk", "template_5yl1nih", form)
-        .then(() => {
-          // Then send confirmation to user
-          return emailjs.sendForm("service_4b5x5qk", "template_2bbr7ys", form);
-        })
-        .then(() => {
-          showPopup("success", "Message Sent!", "Thank you for contacting Radiant Cloud Limited. We’ll reach out soon!");
-          form.reset();
-          submitBtn.disabled = true; // disable again after reset
-        })
-        .catch(() => {
-          showPopup("error", "❌ Message Failed!", "Something went wrong. Please try again later.");
-        })
-        .finally(() => {
-          submitBtn.innerHTML = originalText;
-          submitBtn.style.pointerEvents = "auto";
-        });
-    }
-  
-    function showPopup(type, title, message) {
-      popup.innerHTML = `
-        <span class="icon">${type === "success" ? "✅ " : "❌"}</span>
-        <h3>${title}</h3>
-        <p>${message}</p>
-      `;
-      popup.className = type;
-      popup.style.display = "block";
-  
-      const centerPopup = () => {
-        popup.style.top = "50%";
-        popup.style.left = "50%";
-        popup.style.transform = "translate(-50%, -50%)";
-      };
-      centerPopup();
-      window.addEventListener("resize", centerPopup);
-  
-      setTimeout(() => {
-        popup.style.display = "none";
-        window.removeEventListener("resize", centerPopup);
-      }, 4000);
-    }
-  </script>
+    
 </body>
 
 </html>
